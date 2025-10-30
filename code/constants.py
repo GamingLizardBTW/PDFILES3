@@ -38,6 +38,8 @@ elec_data = {
   "second_motor_reverse":-1.0,
   "second_motor_stop":0.0,
 
+  ## Limit Switch
+  "limit_switch_port":0,
 
 }
 ELEC = namedtuple("Data", elec_data.keys())(**elec_data)
