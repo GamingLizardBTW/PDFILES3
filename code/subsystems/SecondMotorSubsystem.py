@@ -19,9 +19,6 @@ class SecondMotorSubsystemClass(commands2.Subsystem):
         self.request = VoltageOut(0)
         self.limit_switch = wpilib.DigitalInput(ELEC.limit_switch_port)
         self.is_limit_pressed = lambda: self.limit_switch.get()
-        #Configure motor inversion
-        self.second_motor.set_inversed(InvertedValue.Clockwise_Positive)
-
     def run(self, speed: float):
         """
         speed range: -1.0 to +1.0
