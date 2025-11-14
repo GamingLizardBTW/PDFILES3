@@ -48,7 +48,7 @@ class DisplayEncoderValue(commands2.Command):
         wrapped_degrees = self.secondmotorsub.get_encoder_position()
 
         # Raw rotations 
-        raw_rotations = self.secondmotorsub.second_motor.getRotorPosition().value
+        raw_rotations = self.secondmotorsub.second_motor.get_rotor_position().value
 
         # Send both values to SmartDashboard
         wpilib.SmartDashboard.putNumber("Encoder Degrees (Wrapped)", wrapped_degrees)
