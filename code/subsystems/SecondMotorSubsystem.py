@@ -38,7 +38,7 @@ class SecondMotorSubsystemClass(commands2.Subsystem):
         self.run(0.0)
 
     def get_encoder_position(self) -> float:
-        rotations = self.second_motor.getRotorPosition().value
+        rotations = self.second_motor.get_rotor_position().value
         degrees = rotations * 360.0
         wrapped = degrees % 360.0
         return wrapped
