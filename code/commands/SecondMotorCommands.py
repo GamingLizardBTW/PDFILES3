@@ -45,7 +45,7 @@ class DisplayEncoderValue(commands2.Command):
 
     def initialize(self):
         # Read encoder wrapped degrees
-        wrapped_degrees = self.secondmotorsub.get_encoder_position()
+        wrapped_degrees = self.secondmotorsub.get_motor_position()
 
         # Raw rotations 
         raw_rotations = self.secondmotorsub.second_motor.get_rotor_position().value

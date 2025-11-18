@@ -8,7 +8,7 @@ from phoenix6.controls import VoltageOut
 import wpilib
 from phoenix6.signals import InvertedValue, NeutralModeValue
 
-from constants import ELEC
+from constants import ELEC, SW
 
 
 class SecondMotorSubsystemClass(commands2.Subsystem):
@@ -37,7 +37,7 @@ class SecondMotorSubsystemClass(commands2.Subsystem):
     def stop(self):
         self.run(0.0)
 
-    def get_encoder_position(self) -> float:
+    def get_motor_position(self) -> float:
         rotations = self.second_motor.get_rotor_position().value
         degrees = rotations * 360.0
         wrapped = degrees % 360.0

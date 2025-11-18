@@ -52,5 +52,7 @@ OP = namedtuple("Data", op_data.keys())(**op_data)
 
 # Software constants, e.g. PID values, absolute encoder zero points
 sw_data = {
+    
+    
 }
 SW = namedtuple("Data", sw_data.keys())(**sw_data)
